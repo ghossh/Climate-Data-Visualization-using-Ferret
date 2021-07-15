@@ -1,0 +1,173 @@
+use section_sla_low.nc
+
+sp rm -rf *.plt*
+set mode meta
+PPL axlsze, 0.13,0.13
+ppl txlsze, 0.13
+ppl dfltfnt DR
+set memory/size=5000
+
+go multi_view 3, 4, 0.19, 0.07, 0.05, 0.21, 0.12, 0.04,, 0.05,0.005
+ 
+
+
+let sla_low_0= sla_low[d=1,t=01-oct-2005:31-dec-2005@ave]*100
+set view v11
+PPL SHASET RESET
+ppl AXLABP 0,-1 
+let sla_low_mean_1993=sla_low[d=1,t=01-jun-1993:30-sep-1993@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1993
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1993 " 
+
+
+
+set view v12
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_1994=sla_low[d=1,t=01-jun-1994:30-sep-1994@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1994
+
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1994 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p2 ME, +ve IOD "
+label/NOUSER  0.75,0.25,0,0,.16,"@p2 ONI:0.4 "
+
+
+set view v13
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_1995=sla_low[d=1,t=01-jun-1995:30-sep-1995@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1995
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1995 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p4 ML "
+label/NOUSER  0.75,0.25,0,0,.16,"@p4 ONI:-0.2 "
+
+
+
+set view v14
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_1996=sla_low[d=1,t=01-jun-1996:30-sep-1996@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1996
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1996 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p4-ve IOD " 
+
+
+set view v21
+PPL SHASET RESET
+ppl AXLABP 0,-1
+let sla_low_mean_1997=sla_low[d=1,t=01-jun-1997:30-sep-1997@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1997
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1997 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p2 VSE, +ve IOD " 
+label/NOUSER  0.75,0.25,0,0,.16,"@p2 ONI:1.6 "
+
+set view v22
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_1998=sla_low[d=1,t=01-jun-1998:30-sep-1998@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1998
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1998 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p4 SL, -ve IOD " 
+label/NOUSER  0.75,0.25,0,0,.16,"@p4 ONI:-0.8 "
+
+set view v23
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_1999=sla_low[d=1,t=01-jun-1999:30-sep-1999@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_1999
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 1999 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p4 SL "
+label/NOUSER  0.75,0.25,0,0,.16,"@p4 ONI:-1.1 " 
+
+
+set view v24
+PPL SHASET RESET
+ppl AXLABP 0,0 
+let sla_low_mean_2000=sla_low[d=1,t=01-jun-2000:30-sep-2000@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_2000
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 2000 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p4 WL "
+label/NOUSER  0.75,0.25,0,0,.16,"@p4 ONI:-0.6 "
+
+
+set view v31
+PPL SHASET RESET
+ppl AXLABP -1,-1 
+let sla_low_mean_2001=sla_low[d=1,t=01-jun-2001:30-sep-2001@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_2001
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 2001 " 
+
+
+
+set view v32
+PPL SHASET RESET
+ppl AXLABP -1,0 
+let sla_low_mean_2002=sla_low[d=1,t=01-jun-2002:30-sep-2002@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_2002
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 2002 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p2 ME "
+label/NOUSER  0.75,0.25,0,0,.16,"@p2 ONI:0.8 " 
+
+
+set view v33
+PPL SHASET RESET
+ppl AXLABP -1,0 
+let sla_low_mean_2003=sla_low[d=1,t=01-jun-2003:30-sep-2003@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_2003
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 2003 "  
+
+
+set view v34
+PPL SHASET RESET
+ppl AXLABP -1,0 
+let sla_low_mean_2004=sla_low[d=1,t=01-jun-2004:30-sep-2004@ave]*100
+plot/nolabel/thick=2/set/vlimit=-15:15:3/hlimit=8:19:2/color=3 sla_low_mean_2004
+ppl plot
+plot/nolabel/thick=1/dash/ov/color=1 sla_low_0[l=1]*0.0
+label/NOUSER  2.6,0.35,0,0,.16," 2004 " 
+label/NOUSER  0.75,0.5,0,0,.16,"@p2 WE "
+label/NOUSER  0.75,0.25,0,0,.16,"@p2 ONI:0.5 "
+
+
+label/NOUSER -5,13,0,0,.3,"@p7 sla_low model interannual (JUN-SEP)"
+label/NOUSER  -5,-0.8,0,0,.2," Latitude -"
+label/NOUSER  -13.6,6,0,90,.2," SLA -"
+frame/file=pic_sla_low_1993_2004_summer.jpg /"ypixel=2000"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

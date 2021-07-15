@@ -1,0 +1,7 @@
+use section_sla.nc
+
+set mem/size=500
+
+let sla_low=lsl_lowpass(sla,400,400)
+
+list/file=section_sla_lanczos.nc/format=cdf/clob sla_low
