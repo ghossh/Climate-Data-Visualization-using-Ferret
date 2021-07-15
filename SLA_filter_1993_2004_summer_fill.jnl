@@ -1,0 +1,157 @@
+use section_sla_low.nc
+
+
+sp rm -rf *.plt*
+set mode meta
+PPL axlsze, 0.13,0.13
+ppl txlsze, 0.13
+ppl dfltfnt DR
+set memory/size=5000
+
+go multi_view 3, 4, 0.19, 0.07, 0.05, 0.21, 0.12, 0.08,, 0.05,0.005
+ 
+
+
+set view v11
+PPL SHASET RESET
+ppl AXLABP 0,-1 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1993:30-sep-1993]*100
+ppl fill
+!label  21,-9,0,0,0.14," 1993 " 
+
+
+
+set view v12
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1994:30-sep-1994]*100
+ppl fill
+!label  606,9,0,0,0.15," 1994 " 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p2 ME"
+label/NOUSER  2.75,-0.6,0,0,.14,"@p2 +ve IOD" 
+label/NOUSER  0.75,-0.8,0,0,.14,"@p2 ONI:0.4"
+
+
+set view v13
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1995:30-sep-1995]*100  
+ppl fill
+!label  976,9,0,0,0.14," 1995 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p4 ONI:-0.2" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p4 ML "
+
+
+
+set view v14
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1996:30-sep-1996]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 1996 "
+!label/NOUSER  0.75,-0.8,0,0,.14,"@p2 ONI:-0.3" 
+label/NOUSER  2.75,-0.6,0,0,.14,"@p4-ve IOD " 
+
+
+set view v21
+PPL SHASET RESET
+ppl AXLABP 0,-1
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1997:30-sep-1997]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 1997 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p2 ONI:1.6" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p2 VSE"
+label/NOUSER  2.75,-0.6,0,0,.14,"@p2 +ve IOD " 
+
+
+set view v22
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1998:30-sep-1998]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 1998 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p4 ONI:-0.8" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p4 SL"
+label/NOUSER  2.75,-0.6,0,0,.14,"@p4 -ve IOD " 
+
+
+set view v23
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-1999:30-sep-1999]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 1999 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p4 ONI:-1.1" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p4 SL "
+ 
+
+
+set view v24
+PPL SHASET RESET
+ppl AXLABP 0,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-2000:30-sep-2000]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 2000 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p4 ONI:-0.6" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p4 WL "
+
+
+
+set view v31
+PPL SHASET RESET
+ppl AXLABP -1,-1 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-2001:30-sep-2001]*100  
+ppl shakey 1,0,0.15,1,1,6,2.0 16.0 .30 .50
+ppl fill
+!label  21,-9,0,0,0.14," 2001 " 
+
+
+
+set view v32
+PPL SHASET RESET
+ppl AXLABP -1,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-2002:30-sep-2002]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 2002 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p2 ONI:0.8" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p2 ME "
+ 
+
+
+set view v33
+PPL SHASET RESET
+ppl AXLABP -1,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-2003:30-sep-2003]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 2003 "  
+
+
+set view v34
+PPL SHASET RESET
+ppl AXLABP -1,0 
+fill/level=(-inf)(-15,15,1)(inf)/nolabel/nokey/Y=8:19/set/pal=blue_darkred  sla_low[d=1,t=01-jun-2004:30-sep-2004]*100  
+ppl fill
+!label  21,-9,0,0,0.14," 2004 "
+label/NOUSER  0.75,-0.8,0,0,.14,"@p2 ONI:0.5" 
+label/NOUSER  0.75,-0.5,0,0,.14,"@p2 WE "
+
+
+
+label/NOUSER -5,13,0,0,.3,"@p7 sla_low interannual (jun-sep)"
+label/NOUSER  -13.6,6,0,90,.2," Latitude -"
+frame/file=pic_sla_low_1993_2004_summer_fill.jpg /"ypixel=2000"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
